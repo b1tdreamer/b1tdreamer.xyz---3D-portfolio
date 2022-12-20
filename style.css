@@ -1,0 +1,132 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 54px;
+  color: #aaa;
+}
+
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main{
+  position:absolute;
+  display: grid;
+  grid-template-columns: repeat(11,1fr);
+}
+  main img{
+    max-width: 600px;
+  }
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #762f5d
+} 
+h1{font-size: 6rem;line-height: 5.5rem}
+h2 {font-size: 3.5rem}
+.subheading {
+  text-align: justify;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.48rem;
+}
+ul{list-style-type: none;}
+
+a { color: #762f5d;transition: color 0.45s;}
+
+a:active,a:focus,a:hover { color: #863f6d !important;}
+
+.standard-box{
+  margin: 6rem;
+  grid-column: 2 / 12;
+}
+
+#b1tface{
+  margin: 18vh 0 25vh 0;
+  grid-column: 2 / 4;
+}
+
+#about{
+  margin: 35vh 0 0 0;
+  grid-column: 6 / 12;
+}
+#about .subheading{
+  width: 600px;
+}
+#about .subheading a{
+  padding: 0 0.5rem 0 0;
+}
+
+#projects{
+  grid-column: 2 / span 5;
+}
+
+#skills{
+  grid-column: 2 / span 9;
+}
+
+.list-social-icons{
+  margin: 1rem 0 0 0;
+}
+
+.list-social-icons a {
+    color: #762f5d
+}
+.list-social-icons a:hover {
+    color: #863f6d
+}
+.list-social-icons a .fa-lg {
+    font-size: 1.75rem
+}
+.list-icons {
+    font-size: 3rem
+}
+.list-icons .list-inline-item i:hover {
+    color: #863f6d
+}
+.list-social-icons li{
+    border-radius: 50px;
+    transition: background 0.45s;
+}
+.list-social-icons li:hover{
+    background: #622d4c;
+    border-radius: 50px;
+}
+
+/* SCROLLBAR Customization */
+/* width */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #333;
+  background: #666;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #762f5d;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #6a2351;
+}
+
+@media (min-width: 992px){
+  section{
+    min-height: 100vh;
+  }
+}
+  
