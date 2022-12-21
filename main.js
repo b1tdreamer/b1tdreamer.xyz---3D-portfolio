@@ -22,7 +22,13 @@ const geometry = new THREE.TorusKnotGeometry( 10, 3, 100, 16 );
 const material = new THREE.MeshBasicMaterial( { color: 0x622d4c, wireframe: true  } );
 //const material = new THREE.MeshStandardMaterial( { color: 0x622d4c  } );
 const torusKnot = new THREE.Mesh( geometry, material );
-scene.add(torusKnot);
+
+const geometry2 = new THREE.TorusKnotGeometry( 13,224, 3,6729, 238, 19, 6, 9 );
+const material2 = new THREE.MeshStandardMaterial( { color:0x863f6d  } );
+const torusKnot2 = new THREE.Mesh( geometry, material );
+torusKnot2.position.z = 120;
+
+scene.add(torusKnot,torusKnot2);
 
 
 //Adding light
@@ -67,7 +73,7 @@ const b1tface = new THREE.Mesh(
 );
 scene.add(b1tface);*/
 
-//Moon
+/*Moon
 const moonTexture = new THREE.CubeTextureLoader().load('img/moon.jpg');
 const normalTexture = new THREE.CubeTextureLoader().load('img/normal.jpg');
 
@@ -80,7 +86,7 @@ const moon = new THREE.Mesh(
 )
 scene.add(moon);
 moon.position.z = 30;
-moon.position.setX(-10);
+moon.position.setX(-10);*/
 
 //Animate function, loop
 function animate(){
@@ -89,6 +95,10 @@ function animate(){
   torusKnot.rotation.x += 0.005;
   torusKnot.rotation.y += 0.0005;
   torusKnot.rotation.z += 0.004;
+
+  torusKnot2.rotation.x -= 0.005;
+  torusKnot2.rotation.y -= 0.0005;
+  torusKnot2.rotation.z -= 0.004;
 
   renderer.render(scene, camera);
 }
@@ -99,9 +109,9 @@ function moveCamera(){
 
   const t = document.body.getBoundingClientRect().top;
 
-  moon.rotation.x = 0.05;
+  /*moon.rotation.x = 0.05;
   moon.rotation.y = 0.075;
-  moon.rotation.z = 0.05;
+  moon.rotation.z = 0.05;*/
 
   //b1tface.rotation.y = 0.01
   //b1tface.rotation.z = 0.01

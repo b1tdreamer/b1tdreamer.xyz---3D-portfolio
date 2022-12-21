@@ -6,7 +6,34 @@ body{
   font-family: 'Open Sans', sans-serif;
   padding-top: 54px;
   color: #aaa;
+  font-size: 1.2rem;
 }
+
+menu{
+  position: fixed;
+  z-index:9;
+  top: 3vh;
+  right: 5vh;
+  width: 100vh;
+  list-style: none;
+  text-align: right;
+}
+  menu li{
+    display: inline-block;
+    padding: 0 1rem;
+  }
+  menu a{
+    color:#aaa;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  menu a:hover{
+    color:#622d4c;
+    text-decoration: none;
+  }
 
 canvas{
   position: fixed;
@@ -20,7 +47,7 @@ main{
   grid-template-columns: repeat(11,1fr);
 }
   main img{
-    max-width: 600px;
+    max-width: 1000px;
   }
 
 h1,h2,h3,h4,h5,h6{
@@ -36,27 +63,31 @@ h2 {font-size: 3.5rem}
   text-transform: uppercase;
   font-weight: 500;
   font-family: 'Saira Extra Condensed', sans-serif;
-  font-size: 1.48rem;
+  font-size: 1.65rem;
 }
 ul{list-style-type: none;}
 
 a { color: #762f5d;transition: color 0.45s;}
-
 a:active,a:focus,a:hover { color: #863f6d !important;}
 
 .standard-box{
   margin: 6rem;
-  grid-column: 2 / 12;
+  grid-column: 2 / 10;
+  margin: 18vh 0 25vh 0;
+  padding: 10vh 0 0 0;
 }
 
 #b1tface{
-  margin: 18vh 0 25vh 0;
+  margin: 20vh 0 25vh 0;
   grid-column: 2 / 4;
 }
-
+#contact{
+  margin-bottom: 0;
+  padding-top: 40vh;
+}
 #about{
   margin: 35vh 0 0 0;
-  grid-column: 6 / 12;
+  grid-column: 5 / 10;
 }
 #about .subheading{
   width: 600px;
@@ -64,13 +95,20 @@ a:active,a:focus,a:hover { color: #863f6d !important;}
 #about .subheading a{
   padding: 0 0.5rem 0 0;
 }
-
-#projects{
-  grid-column: 2 / span 5;
+.resume-item, .resume-content{
+  width: 1000px;
 }
+.resume-date .text-primary{
+  color:#aaa !important;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 1.6rem;
+  float:right;
+  width: 200px;
+};
 
-#skills{
-  grid-column: 2 / span 9;
+.video-element {
+  float: left;
+  margin: 0 40px 30px 0;
 }
 
 .list-social-icons{
@@ -99,6 +137,19 @@ a:active,a:focus,a:hover { color: #863f6d !important;}
 .list-social-icons li:hover{
     background: #622d4c;
     border-radius: 50px;
+}
+.purple{color: #762f5d;}
+
+.skill{
+  display: inline-block;
+  width: 330px;
+}
+
+.skill::before{
+  content: "<<";
+  color: #762f5d;
+  padding-right: 10px;
+  font-weight: bold;
 }
 
 /* SCROLLBAR Customization */
